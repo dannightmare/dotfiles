@@ -26,7 +26,7 @@ require('pckr').add{
   'sbdchd/neoformat';
   'morhetz/gruvbox';
   'f-person/git-blame.nvim';
-  { 'dccsillag/magma-nvim', run = ':UpdateRemotePlugins' };
+  -- { 'dccsillag/magma-nvim', run = ':UpdateRemotePlugins' };
 
   'Vigemus/iron.nvim';
   'github/copilot.vim';
@@ -38,8 +38,8 @@ vim.cmd("set rnu")
 vim.cmd("colorscheme gruvbox")
 vim.cmd("set colorcolumn=80")
 
-vim.g.magma_image_provide = "kitty"
-vim.g.magma_automatically_open_output = false
+-- vim.g.magma_image_provide = "kitty"
+-- vim.g.magma_automatically_open_output = false
 
 vim.g["enable_at_startup"] = 1
 
