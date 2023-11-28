@@ -38,6 +38,7 @@ require('pckr').add {
   --        require('distant'):setup()
   --    end
   --  }
+  { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' };
   'FabijanZulj/blame.nvim'
 }
 
@@ -104,3 +105,10 @@ vim.keymap.set('n', '<space>rf', '<cmd>IronFocus<cr>')
 vim.keymap.set('n', '<space>rh', '<cmd>IronHide<cr>')
 
 require "local"
+
+local n_keymap = function(lhs, rhs)
+    vim.api.nvim_set_keymap('n', lhs, rhs, { noremap = true, silent = true })
+end
+
+n_keymap("<C-d>", "<C-d>zz")
+n_keymap("<C-u>", "<C-u>zz")
