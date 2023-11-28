@@ -16,7 +16,7 @@ end
 
 bootstrap_pckr()
 
-require('pckr').add{
+require('pckr').add {
   -- My plugins here
   -- 'foo1/bar1.nvim';
   -- 'foo2/bar2.nvim';
@@ -29,14 +29,23 @@ require('pckr').add{
   -- { 'dccsillag/magma-nvim', run = ':UpdateRemotePlugins' };
 
   'Vigemus/iron.nvim';
-  'github/copilot.vim';
+  -- 'github/copilot.vim';
   -- 'deoplete-plugins/deoplete-clang';
+  --  {
+  --    'chipsenkbeil/distant.nvim',
+  --    branch = 'v0.3',
+  --    config = function()
+  --        require('distant'):setup()
+  --    end
+  --  }
 }
 
 vim.cmd("set nu")
 vim.cmd("set rnu")
 vim.cmd("colorscheme gruvbox")
 vim.cmd("set colorcolumn=80")
+
+-- vim.opt.runtimepath:append('~/.config/nvim/')
 
 -- vim.g.magma_image_provide = "kitty"
 -- vim.g.magma_automatically_open_output = false
@@ -93,3 +102,4 @@ vim.keymap.set('n', '<space>rr', '<cmd>IronRestart<cr>')
 vim.keymap.set('n', '<space>rf', '<cmd>IronFocus<cr>')
 vim.keymap.set('n', '<space>rh', '<cmd>IronHide<cr>')
 
+require "local"
