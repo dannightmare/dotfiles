@@ -38,6 +38,7 @@ require('pckr').add {
   --        require('distant'):setup()
   --    end
   --  }
+  'FabijanZulj/blame.nvim'
 }
 
 vim.cmd("set nu")
