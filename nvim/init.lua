@@ -17,27 +17,15 @@ end
 bootstrap_pckr()
 
 require('pckr').add {
-  -- My plugins here
-  -- 'foo1/bar1.nvim';
-  -- 'foo2/bar2.nvim';
   'dense-analysis/ale';
   'nvim-lua/completion-nvim';
   { 'Shougo/deoplete.nvim', run = ':UpdateRemotePlugins' };
   'sbdchd/neoformat';
   'morhetz/gruvbox';
   'f-person/git-blame.nvim';
-  -- { 'dccsillag/magma-nvim', run = ':UpdateRemotePlugins' };
 
   'Vigemus/iron.nvim';
   -- 'github/copilot.vim';
-  -- 'deoplete-plugins/deoplete-clang';
-  --  {
-  --    'chipsenkbeil/distant.nvim',
-  --    branch = 'v0.3',
-  --    config = function()
-  --        require('distant'):setup()
-  --    end
-  --  }
   { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' };
   'FabijanZulj/blame.nvim'
 }
@@ -48,9 +36,6 @@ vim.cmd("colorscheme gruvbox")
 vim.cmd("set colorcolumn=80")
 
 -- vim.opt.runtimepath:append('~/.config/nvim/')
-
--- vim.g.magma_image_provide = "kitty"
--- vim.g.magma_automatically_open_output = false
 
 vim.g["enable_at_startup"] = 1
 
