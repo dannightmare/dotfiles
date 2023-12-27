@@ -34,12 +34,18 @@ require('pckr').add {
   'tpope/vim-fugitive';
 }
 
+
 vim.cmd("set nu")
 vim.cmd("set rnu")
+
 vim.cmd("colorscheme gruvbox")
 vim.cmd("set colorcolumn=80")
 
+vim.cmd("set smartcase")
+
+
 -- vim.opt.runtimepath:append('~/.config/nvim/')
+
 
 vim.g["enable_at_startup"] = 1
 
