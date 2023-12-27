@@ -49,7 +49,22 @@ vim.cmd("set smartcase")
 
 vim.g["enable_at_startup"] = 1
 
--- the following section relating to iron ends at line 150
+
+-- ALE LINTERS
+vim.g.ale_linters = {
+	python = {'pyright', 'pylint'},
+	-- go = {'gopls'},
+}
+
+
+-- JEDI
+-- vim.g.jedi_show_call_signatures = "0"
+-- vim.g.jedi_use_tabs_not_buffers = "0"
+-- vim.cmd("let g:jedi#show_call_signatures = \"2\"")
+-- vim.cmd("let g:jedi#use_tabs_not_buffers = \"1\"")
+
+
+-- IRON
 local iron = require("iron.core")
 
 iron.setup {
