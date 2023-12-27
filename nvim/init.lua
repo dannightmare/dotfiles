@@ -24,10 +24,14 @@ require('pckr').add {
   'morhetz/gruvbox';
   'f-person/git-blame.nvim';
 
+  'fatih/vim-go';
   'Vigemus/iron.nvim';
   -- 'github/copilot.vim';
   { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' };
-  'FabijanZulj/blame.nvim'
+  -- 'FabijanZulj/blame.nvim';
+  -- 'davidhalter/jedi-vim';
+  'carlsmedstad/vim-bicep';
+  'tpope/vim-fugitive';
 }
 
 vim.cmd("set nu")
