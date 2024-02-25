@@ -19,7 +19,7 @@ bootstrap_pckr()
 require('pckr').add {
   'dense-analysis/ale';
   'nvim-lua/completion-nvim';
-  { 'Shougo/deoplete.nvim', run = ':UpdateRemotePlugins' };
+  -- { 'Shougo/deoplete.nvim', run = ':UpdateRemotePlugins' };
   'sbdchd/neoformat';
   'morhetz/gruvbox';
   'f-person/git-blame.nvim';
@@ -32,6 +32,22 @@ require('pckr').add {
   -- 'davidhalter/jedi-vim';
   'carlsmedstad/vim-bicep';
   'tpope/vim-fugitive';
+
+  -- Neovim Completion Manager plugins
+  'ncm2/ncm2';
+  'roxma/nvim-yarp';
+  'ncm2/ncm2-bufword';
+  'ncm2/ncm2-path';
+  'ncm2/ncm2-github';
+  'ncm2/ncm2-jedi';
+  'ncm2/ncm2-go';
+  'TyberiusPrime/ncm2-bufline';
+  'ncm2/ncm2-vim';
+  'Shougo/neco-vim';
+
+  -- LSP
+  'prabirshrestha/vim-lsp';
+  'ncm2/ncm2-vim-lsp';
 }
 
 
@@ -39,7 +55,7 @@ vim.cmd("set nu")
 vim.cmd("set rnu")
 
 vim.cmd("colorscheme gruvbox")
-vim.cmd("set colorcolumn=80")
+vim.cmd("set colorcolumn=120")
 
 vim.cmd("set smartcase")
 
@@ -51,10 +67,12 @@ vim.g["enable_at_startup"] = 1
 
 
 -- ALE LINTERS
+--[[
 vim.g.ale_linters = {
 	python = {'pyright', 'pylint'},
 	-- go = {'gopls'},
 }
+]]
 
 
 -- JEDI
