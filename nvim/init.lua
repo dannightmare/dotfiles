@@ -92,6 +92,11 @@ vim.g.ale_linters = {
 }
 ]]
 
+vim.g.ale_fixers = {
+	lua = {'lua-format'},
+	go = {'gofmt'},
+}
+
 
 -- JEDI
 -- vim.g.jedi_show_call_signatures = "0"
