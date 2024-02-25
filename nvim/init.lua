@@ -17,21 +17,34 @@ end
 bootstrap_pckr()
 
 require('pckr').add {
+  -- ALE
   'dense-analysis/ale';
-  'nvim-lua/completion-nvim';
-  -- { 'Shougo/deoplete.nvim', run = ':UpdateRemotePlugins' };
-  'sbdchd/neoformat';
-  'morhetz/gruvbox';
-  'f-person/git-blame.nvim';
 
-  'fatih/vim-go';
+  -- 'nvim-lua/completion-nvim';
+  -- { 'Shougo/deoplete.nvim', run = ':UpdateRemotePlugins' };
+
+  -- Formatter
+  'sbdchd/neoformat';
+
+  -- Theme
+  'morhetz/gruvbox';
+
+  -- Git Blame
+  'f-person/git-blame.nvim';
+  'tpope/vim-fugitive';
+
+  -- IRON
   'Vigemus/iron.nvim';
+
   -- 'github/copilot.vim';
+  -- TreeSitter
   { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' };
   -- 'FabijanZulj/blame.nvim';
   -- 'davidhalter/jedi-vim';
+
+  -- Additional language support
   'carlsmedstad/vim-bicep';
-  'tpope/vim-fugitive';
+  'fatih/vim-go';
 
   -- Neovim Completion Manager plugins
   'ncm2/ncm2';
@@ -44,6 +57,7 @@ require('pckr').add {
   'TyberiusPrime/ncm2-bufline';
   'ncm2/ncm2-vim';
   'Shougo/neco-vim';
+  'ncm2/ncm2-pyclang';
 
   -- LSP
   'prabirshrestha/vim-lsp';
