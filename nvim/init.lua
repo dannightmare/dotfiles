@@ -64,6 +64,10 @@ require('pckr').add {
   'ncm2/ncm2-vim-lsp';
 }
 
+-- enable ncm2
+vim.cmd("autocmd BufEnter * call ncm2#enable_for_buffer()")
+vim.cmd("set completeopt=noinsert,menuone,noselect")
+
 
 vim.cmd("set nu")
 vim.cmd("set rnu")
