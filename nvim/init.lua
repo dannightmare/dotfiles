@@ -24,7 +24,7 @@ require('pckr').add {
   -- { 'Shougo/deoplete.nvim', run = ':UpdateRemotePlugins' };
 
   -- Formatter
-  'sbdchd/neoformat';
+  -- 'sbdchd/neoformat';
 
   -- Theme
   'morhetz/gruvbox';
