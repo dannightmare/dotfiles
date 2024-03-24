@@ -28,9 +28,10 @@ require('pckr').add {
 
   -- Theme
   'morhetz/gruvbox';
+  'nvim-tree/nvim-web-devicons';
 
   -- lualine
-  { 'nvim-lualine/lualine.nvim', dependencies = { 'nvim-tree/nvim-web-devicons' } };
+  { 'nvim-lualine/lualine.nvim', requires = { 'nvim-tree/nvim-web-devicons', opt = true } };
 
   -- SIDEBAR
   'sidebar-nvim/sidebar.nvim';
