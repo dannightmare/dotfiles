@@ -1,8 +1,8 @@
 return {
     'Vigemus/iron.nvim',
-    config = {
+    config = function()
         -- Whether a repl should be discarded or not
-        scratch_repl = true,
+        scratch_repl = true
         -- Your repl definitions come here
         repl_definition = {
             sh = {
@@ -10,11 +10,15 @@ return {
                 -- returns a table (see below)
                 command = { "zsh" }
             }
-        },
+        }
         -- How the repl window will be displayed
         -- See below for more information
         repl_open_cmd = require("iron.view").split.horizontal.botright(0.3)
-    },
+        vim.keymap.set('n', '<leader>rs', '<cmd>IronRepl<cr>')
+        vim.keymap.set('n', '<leader>rr', '<cmd>IronRestart<cr>')
+        vim.keymap.set('n', '<leader>rf', '<cmd>IronFocus<cr>')
+        vim.keymap.set('n', '<leader>rh', '<cmd>IronHide<cr>')
+    end,
     -- Iron doesn't set keymaps by default anymore.
     -- You can set them here or manually add keymaps to the functions in iron.core
     keymaps = {
