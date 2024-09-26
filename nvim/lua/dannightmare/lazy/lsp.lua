@@ -30,6 +30,7 @@ return {
                 "lua_ls",
                 "rust_analyzer",
                 "gopls",
+                "clangd",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
@@ -38,6 +39,22 @@ return {
                     }
                 end,
 
+                ["pylsp"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.pylsp.setup {
+                        capabilities = capabilities,
+                        settings = {
+                            pylsp = {
+                                plugins = {
+                                    pycodestyle = {
+                                        ignore = { "E402" },
+                                        maxLineLength = 100,
+                                    }
+                                }
+                            }
+                        }
+                    }
+                end,
                 ["lua_ls"] = function()
                     local lspconfig = require("lspconfig")
                     lspconfig.lua_ls.setup {
