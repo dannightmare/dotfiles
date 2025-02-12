@@ -31,12 +31,23 @@ return {
                 -- "rust_analyzer",
                 "gopls",
                 "bufls",
-                "pylsp@1.5.0",
+                "pylsp",
+                "clangd",
             },
             handlers = {
                 function(server_name) -- default handler (optional)
                     require("lspconfig")[server_name].setup {
                         capabilities = capabilities
+                    }
+                end,
+
+                ["clangd"] = function()
+                    local lspconfig = require("lspconfig")
+                    lspconfig.clangd.setup {
+                        capabilities = capabilities,
+                        cmd = { "clangd", "--background-index", "--clang-tidy" },
+                        filetypes = { "c", "cpp", "h", "hpp" },
+                        root_dir = lspconfig.util.root_pattern("compile_commands.json", "compile_flags.txt"),
                     }
                 end,
 
