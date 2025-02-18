@@ -3,7 +3,7 @@ return {
     config = function()
         require('iron.core').setup({
             config = {
-                scratch_repl = true,
+                -- scratch_repl = true,
                 repl_open_cmd = require("iron.view").split.horizontal.botright(0.3),
             },
             repl_definition = {
