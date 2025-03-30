@@ -1,19 +1,25 @@
 return {
     'Vigemus/iron.nvim',
     config = function()
-        require('iron.core').setup({
+        local iron = require("iron.core")
+        local view = require("iron.view")
+        local common = require("iron.fts.common")
+
+        iron.setup({
             config = {
                 -- scratch_repl = true,
                 repl_open_cmd = require("iron.view").split.horizontal.botright(0.3),
-            },
-            repl_definition = {
-                py = {
-                    command = { "python3" }
-                },
-                sh = {
-                    -- Can be a table or a function that
-                    -- returns a table (see below)
-                    command = { "zsh" }
+                repl_definition = {
+                    python = {
+                        command = { "ipython", "--no-autoindent" },
+                        format = common.bracketed_paste_python,
+                        block_deviders = { "# %%", "#%%" },
+                    },
+                    sh = {
+                        -- Can be a table or a function that
+                        -- returns a table (see below)
+                        command = { "zsh" }
+                    }
                 }
             },
             keymaps = {
